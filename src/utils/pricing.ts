@@ -20,8 +20,8 @@ export let WHITELIST_TOKENS: string[] = [
 
 let STABLE_COINS: string[] = [
   '0x95a0a7953f9292838c0614d690005d5c716e718e',
-  '0xad43669cbac863e33449d423261e525de8da0ff4' // DAI
-  '0x5c17c48f127d6ae5794b2404f1f8a5ceed419edf', // ZED
+  '0xad43669cbac863e33449d423261e525de8da0ff4', // DAI
+  '0x5c17c48f127d6ae5794b2404f1f8a5ceed419edf' // ZED
 ]
 let MINIMUM_ETH_LOCKED = BigDecimal.fromString('60')
 
