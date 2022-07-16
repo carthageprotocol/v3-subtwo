@@ -39,7 +39,7 @@ export function getEthPriceInUSD(): BigDecimal {
   if (usdcPool !== null) {
     return usdcPool.token0Price
   } else {
-    return 1
+    return ZERO_BD
   }
 }
 
