@@ -23,7 +23,7 @@ let STABLE_COINS: string[] = [
   '0xad43669cbac863e33449d423261e525de8da0ff4', // DAI
   '0x5c17c48f127d6ae5794b2404f1f8a5ceed419edf' // ZED
 ]
-let MINIMUM_ETH_LOCKED = BigDecimal.fromString('60')
+let MINIMUM_ETH_LOCKED = BigDecimal.fromString('2')
 
 let Q192 = 2 ** 192
 export function sqrtPriceX96ToTokenPrices(sqrtPriceX96: BigInt, token0: Token, token1: Token): BigDecimal[] {
@@ -40,7 +40,7 @@ export function sqrtPriceX96ToTokenPrices(sqrtPriceX96: BigInt, token0: Token, t
 export function getEthPriceInUSD(): BigDecimal {
   let usdcPool = Pool.load(USDC_WETH_03_POOL)
   if (usdcPool !== null) {
-    return usdcPool.token0Price
+    return usdcPool.token1Price
   } else {
     return ZERO_BD
   }
